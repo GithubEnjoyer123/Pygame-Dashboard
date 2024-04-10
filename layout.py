@@ -5,6 +5,7 @@ import sys
 from DrawVeritcalLines import * 
 from DrawDescendingLines import *
 from DrawHorizontalLines import *
+from DrawAscendingLines import *
 
 pygame.init()
 
@@ -178,89 +179,7 @@ def checkWIn(player):
     if board[8][6] == player and board[7][7] == player and board[6][8] == player:
         drawAscLineBottomRight( player ) 
 
-def drawAscLine( player ):
-    
-    if player == 1:
-        color = circleColor
-    elif player == 2:
-        color = EXCOLOR
         
-    pygame.draw.line( screen, color,(15,HEIGHT - 15), (WIDTH - 15, 15), 6 )
-    
-def drawAscLineTopMiddle( player ):
-    
-    if player == 1:
-        color = circleColor
-    elif player == 2:
-        color = EXCOLOR
-        
-    pygame.draw.line( screen, color,(240,240), (480,0), 6 )
-    
-def drawAscLineTopRight( player ):
-    
-    if player == 1:
-        color = circleColor
-    elif player == 2:
-        color = EXCOLOR
-        
-    pygame.draw.line( screen, color,(480,240), (720,0), 6 )
-    
-def drawAscLineMiddleLeft( player ):
-    
-    if player == 1:
-        color = circleColor
-    elif player == 2:
-        color = EXCOLOR
-        
-    pygame.draw.line( screen, color,(0,480), (240,240), 6 )
-    
-def drawAscLineMiddle( player ):
-    
-    if player == 1:
-        color = circleColor
-    elif player == 2:
-        color = EXCOLOR
-        
-    pygame.draw.line( screen, color,(240,480), (480,240), 6 )
-    
-def drawAscLineMiddleRight( player ):
-    
-    if player == 1:
-        color = circleColor
-    elif player == 2:
-        color = EXCOLOR
-        
-    pygame.draw.line( screen, color,(480,480), (720,240), 6 )
-    
-def drawAscLineBottomLeft( player ):
-    
-    if player == 1:
-        color = circleColor
-    elif player == 2:
-        color = EXCOLOR
-        
-    pygame.draw.line( screen, color,(0,720), (240,480), 6 )
-    
-def drawAscLineBottomMiddle( player ):
-    
-    if player == 1:
-        color = circleColor
-    elif player == 2:
-        color = EXCOLOR
-        
-    pygame.draw.line( screen, color,(240,720), (480,480), 6 )
-    
-def drawAscLineBottomRight( player ):
-    
-    if player == 1:
-        color = circleColor
-    elif player == 2:
-        color = EXCOLOR
-        
-    pygame.draw.line( screen, color,(480,720), (720,480), 6 )
-    
-    
-    
 def restart():
     pass
 
