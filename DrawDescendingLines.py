@@ -23,6 +23,7 @@ def drawDescLine( player ):
         color = EXCOLOR
         
     pygame.draw.line( screen, color, (15,15), (WIDTH - 15,HEIGHT - 15), 6)
+    return 1
     
 def drawDescLineMiddle( player ):
     
@@ -32,6 +33,7 @@ def drawDescLineMiddle( player ):
         color = EXCOLOR
         
     pygame.draw.line( screen, color, (240,240), (480 - 15,480 - 15), 6)
+    return 1
     
 def drawDescLineLeftMiddle( player ):
     
@@ -41,6 +43,7 @@ def drawDescLineLeftMiddle( player ):
         color = EXCOLOR
         
     pygame.draw.line( screen, color, (0,240), (240 - 15,480 - 15), 6)
+    return 1
     
     
 def drawDescLineLeftBottomCorner( player ):
@@ -51,6 +54,7 @@ def drawDescLineLeftBottomCorner( player ):
         color = EXCOLOR
         
     pygame.draw.line( screen, color, (0,480), (240 - 15,720 - 15), 6)
+    return 1
     
     
 def drawDescLineRightBottomCorner( player ):
@@ -61,6 +65,7 @@ def drawDescLineRightBottomCorner( player ):
         color = EXCOLOR
         
     pygame.draw.line( screen, color, (480,480), (720 - 15,720 - 15), 6)
+    return 1
     
 def drawDescLineTopMiddle( player ):
     
@@ -70,6 +75,7 @@ def drawDescLineTopMiddle( player ):
         color = EXCOLOR
         
     pygame.draw.line( screen, color, (240,0), (480 - 15, 240 - 15), 6)
+    return 1
     
 def drawDescLineTopRight( player ):
     
@@ -79,6 +85,7 @@ def drawDescLineTopRight( player ):
         color = EXCOLOR
         
     pygame.draw.line( screen, color, (480,0), (720 - 15, 240 - 15), 6)
+    return 1
     
     
 def drawDescLineMiddleRight( player ):
@@ -89,6 +96,7 @@ def drawDescLineMiddleRight( player ):
         color = EXCOLOR
         
     pygame.draw.line( screen, color, (480,240), (720 - 15, 480 - 15), 6)
+    return 1
     
 def drawDescLineBottomMiddle( player ):
     
@@ -98,3 +106,4 @@ def drawDescLineBottomMiddle( player ):
         color = EXCOLOR
         
     pygame.draw.line( screen, color, (240,480), (480 - 15, 720 - 15), 6)
+    return 1

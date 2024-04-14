@@ -24,6 +24,7 @@ def drawVertWinLine( column, player ):
         color = EXCOLOR
         
     pygame.draw.line( screen, color, (posX, 15), (posX, HEIGHT), 6 )
+    return 1
     
     
 def drawVertWinLineMidddle( column, player ):
@@ -36,6 +37,7 @@ def drawVertWinLineMidddle( column, player ):
         color = EXCOLOR
         
     pygame.draw.line( screen, color, (posX, downY), (posX, HEIGHT), 6 )
+    return 1
     
     
 def drawVertWinLineBottom( column, player ):
@@ -48,3 +50,4 @@ def drawVertWinLineBottom( column, player ):
         color = EXCOLOR
         
     pygame.draw.line( screen, color, (posX, downY), (posX, 490), 6 )
+    return 1

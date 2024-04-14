@@ -24,6 +24,7 @@ def drawHorzWinLine( row, player ):
         color = EXCOLOR
     
     pygame.draw.line( screen, color, (15, posY), (WIDTH -15, posY), 6 )
+    return 1
     
 def drawHorzLineMiddle( row, player ):
     posY = row * SQUARESIZE + DIVSIZE
@@ -35,6 +36,7 @@ def drawHorzLineMiddle( row, player ):
         color = EXCOLOR
     
     pygame.draw.line( screen, color, (downX, posY), (WIDTH, posY), 6 )
+    return 1
 
 
 def drawHorzWinLineBottom( row, player ):
@@ -47,3 +49,4 @@ def drawHorzWinLineBottom( row, player ):
         color = EXCOLOR
     
     pygame.draw.line( screen, color, (downX, posY), (490, posY), 6 )
+    return 1
