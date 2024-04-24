@@ -50,8 +50,11 @@ async def main():
     #board dimensioms
     BOARDROWS = 9
     BOARDCOLUMNS = 9
+    BOARDNUM = 9
+    SQUARENUM = 9
 
     board = np.zeros( (BOARDROWS, BOARDCOLUMNS) )
+    fill = np.zeros((BOARDNUM, SQUARENUM))
     #line drawing function
 
     #color constants
@@ -83,8 +86,8 @@ async def main():
 
     #marking square based on user
     def markSquare(row,column, player):
+        fill[currentBoard(row,column)-1][nextBoard(row,column)-1] = 1
         board[row][column] = player
-        print(row, column)
         return player
 
     # checks if square is avaliable  if zero return 0   
@@ -409,6 +412,12 @@ async def main():
             if nextBoard(row, column) == boardNum:
                 if checkBoardWin.playerNum[nextBoard(row, column)] > 0:
                     return nextBoard(row, column)
+                for n in range(9):
+                    if fill[nextBoard(row,column)-1][n] == 0:
+                        break
+                    if n == 8:
+                        fill[nextBoard(row,column)-1][n] = 9
+                        return nextBoard(row, column)
                 screen.blit(overlay_surface, (0, 0))
                 makeBoard(row, column) #Redraws our active square
                 return nextBoard(row, column) #Returns the board we're supposed to be on
@@ -466,8 +475,7 @@ async def main():
                 
                 
                 #Will update the logic here when board win overlay is finished
-                '''if isBoardFull(clickedRow, clickedColumn):
-                nextPass = 0'''
+                
                     
                 #Since nextpass is set to 0 we skip our first iteration. Then we check to see if the player clicked on the proper board. 
                 #If our values are mismatched we redo and get our next click coordinates
@@ -498,6 +506,9 @@ async def main():
                         else:
                             nextPass = nextBoard(clickedRow, clickedColumn)
                         player = 1
+                        
+                if fill[nextBoard(clickedRow, clickedColumn) - 1][8] == 9:
+                    nextPass = 0
         
         pygame.display.update()
         pygame.display.flip()
