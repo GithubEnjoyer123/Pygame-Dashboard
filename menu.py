@@ -23,10 +23,24 @@ pygame.display.set_caption("Menu")
 
 BG = pygame.image.load("assets/Background.png")
 
+# color variables
+black = (0, 0, 0)
+white = (255, 255, 255)
+col_spd = 1
+
+col_dir_breathe = [1, 1, 1]
+col_dir_breathe = [1, -1, -1]
+def_col_breathe = [221, 218, 191]
+def_col_breathe = [100,0,100]
+def_col_breathe = [100,100,0]
+
+minimum = 0
+maximum = 200
+
 def get_font(size):
     return pygame.font.Font("assets/font.ttf", size)
 
-def play():
+""" def play():
     while True:
         PLAY_MOUSE_POS = pygame.mouse.get_pos()
 
@@ -50,7 +64,7 @@ def play():
                 if PLAY_BACK.checkForInput(PLAY_MOUSE_POS):
                     main_menu()
 
-        pygame.display.update()
+        pygame.display.update() """
     
 def options():
     while True:
@@ -78,23 +92,57 @@ def options():
 
         pygame.display.update()
 
+
+def col_change_breathe(color: list, direction: list) -> None:
+    """
+    This function changes an RGB list in a way that we achieve nice breathing effect.
+    :param color: List of RGB values.
+    :param direction: List of color change direction values (-1, 0, or 1).
+    :return: None
+    """
+    for i in range(3):
+        color[i] += col_spd * direction[i]
+        if color[i] >= maximum or color[i] <= minimum:
+            direction[i] *= -1
+        if color[i] >= maximum:
+            color[i] = maximum
+        elif color[i] <= minimum:
+            color[i] = minimum
+
+
+def draw_text(text: str, size: int, col: list, x: int, y: int) -> None:
+    """
+    A simple function for displaying text strings on the game screen.
+    :param text: The string to display.
+    :param size: Size of the text.
+    :param col: Color of the text.
+    :param x: X coordinate of the text.
+    :param y: Y coordinate of the text.
+    :return: None
+    """
+    font_object = pygame.font.Font("assets/font.ttf", 45)
+    text_surface = font_object.render(text, False, col)
+    text_rect = text_surface.get_rect(center=(x, y))
+    SCREEN.blit(text_surface, text_rect)
+
+
 def main_menu():
     while True:
         SCREEN.blit(BG, (0, 0))
 
         MENU_MOUSE_POS = pygame.mouse.get_pos()
 
-        MENU_TEXT = get_font(33).render("ULTIMATE Tic-Tac-Toe", True, ( 221, 218, 191 ))
-        MENU_RECT = MENU_TEXT.get_rect(center=(360, 40))
+        """ MENU_TEXT = get_font(33).render("ULTIMATE Tic-Tac-Toe", True, ( 221, 218, 191 ))
+        MENU_RECT = MENU_TEXT.get_rect(center=(360, 40)) """
 
-        PLAY_BUTTON = Button(image=pygame.image.load("assets/Play Rect.png"), pos=(380, 250), 
+        PLAY_BUTTON = Button(image=pygame.image.load("assets/Play Rect.png"), pos=(360, 250), 
                             text_input="PLAY", font=get_font(30), base_color=( 221, 218, 191 ), hovering_color="Green")
-        OPTIONS_BUTTON = Button(image=pygame.image.load("assets/Options Rect.png"), pos=(380, 400), 
+        OPTIONS_BUTTON = Button(image=pygame.image.load("assets/Options Rect.png"), pos=(360, 400), 
                             text_input="OPTIONS", font=get_font(30), base_color=( 221, 218, 191 ), hovering_color="Green")
-        QUIT_BUTTON = Button(image=pygame.image.load("assets/Quit Rect.png"), pos=(380, 550), 
+        QUIT_BUTTON = Button(image=pygame.image.load("assets/Quit Rect.png"), pos=(360, 550), 
                             text_input="QUIT", font=get_font(30), base_color=( 221, 218, 191 ), hovering_color="Green")
 
-        SCREEN.blit(MENU_TEXT, MENU_RECT)
+        """ SCREEN.blit(MENU_TEXT, MENU_RECT) """
 
         for button in [PLAY_BUTTON, OPTIONS_BUTTON, QUIT_BUTTON]:
             button.changeColor(MENU_MOUSE_POS)
@@ -112,6 +160,14 @@ def main_menu():
                 if QUIT_BUTTON.checkForInput(MENU_MOUSE_POS):
                     pygame.quit()
                     sys.exit()
+
+        # color update
+        col_change_breathe(def_col_breathe, col_dir_breathe)
+        col_change_breathe(def_col_breathe, col_dir_breathe)
+
+        # text displaying
+        draw_text("ULTIMATE", 40, def_col_breathe, 360, 40)
+        draw_text("Tic - Tac - Toe", 40, def_col_breathe, 360, 100)
 
         pygame.display.update()
 
