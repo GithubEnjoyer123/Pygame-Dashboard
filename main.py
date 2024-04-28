@@ -112,7 +112,7 @@ async def main():
                 
         elif(currentBoard(row, column) == 2):   
             if(board[0][3] == player and board[0][4] == player and board[0][5] == player) or\
-                (board[1][3] == player and board[1][4] == player and board[2][5] == player) or \
+                (board[1][3] == player and board[1][4] == player and board[1][5] == player) or \
                 (board[2][3] == player and board[2][4] == player and board[2][5] == player):
                     return 2
             elif(board[0][3] == player and board[1][3] == player and board[2][3] == player) or\
@@ -164,7 +164,7 @@ async def main():
         elif(currentBoard(row, column) == 6):
             if(board[3][6] == player and board[3][7] == player and board[3][8] == player) or\
                 (board[4][6] == player and board[4][7] == player and board[4][8] == player) or \
-                (board[5][6] == player and board[5][7] == player and board[0][8] == player):
+                (board[5][6] == player and board[5][7] == player and board[5][8] == player):
                     return 6 
             elif(board[3][6] == player and board[4][6] == player and board[5][6] == player) or\
                 (board[3][7] == player and board[4][7] == player and board[5][7] == player) or \
