@@ -1,8 +1,8 @@
 import pygame, sys
 from button import Button
-from menu import *
 import subprocess
 from pygame import mixer
+from reset import *
 
 # Starting the mixer 
 mixer.init() 
@@ -134,10 +134,10 @@ def main_menu():
                 if VOLUME_BUTTON.checkForInput(MENU_MOUSE_POS):
                     volume_control()
                 if OPTIONS_BUTTON.checkForInput(MENU_MOUSE_POS):
-                    options()
+                    subprocess.run(["python", "reset.py"])
                 if QUIT_BUTTON.checkForInput(MENU_MOUSE_POS):
                     pygame.quit()
-                    sys.exit()
+                    sys.exit()+i
 
         # color update
         col_change_breathe(def_col_breathe, col_dir_breathe)
