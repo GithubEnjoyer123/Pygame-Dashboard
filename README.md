@@ -6,4 +6,4 @@ To run local pygbag environment run the following commands:
 
 # [Download](https://github.com/GithubEnjoyer123/SDEV_220_Final_Project_Magenta/releases/download/Game/U.TTT.exe)
 
-should work on Windows 64 bit systems
+should work on Windows 64 bit systems. Chrome / Windows will say it's a virus because it's not signed in any way. It's not a virus though.
