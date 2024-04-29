@@ -3,3 +3,7 @@
 To run local pygbag environment run the following commands:
 1. pip install pygbag (this will install pygbag)
 2. pygbag .\main (make sure you're in the folder where you main file is located)
+
+# [Download](https://github.com/GithubEnjoyer123/SDEV_220_Final_Project_Magenta/releases/download/Game/U.TTT.exe)
+
+should work on Windows 64 bit systems
