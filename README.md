@@ -1,6 +1,6 @@
 [![Open in Codespaces](https://classroom.github.com/assets/launch-codespace-7f7980b617ed060a017424585567c406b6ee15c891e84e1186181d67ecf80aa0.svg)](https://classroom.github.com/open-in-codespaces?assignment_repo_id=14098031)
 
-# [Download executable for Windows systems](https://github.com/GithubEnjoyer123/SDEV_220_Final_Project_Magenta/releases/download/Game/U.TTT.exe)
+# [Download executable for Windows systems]([https://github.com/GithubEnjoyer123/SDEV_220_Final_Project_Magenta/releases/download/Game/U.TTT.exe](https://github.com/Living-Tribunal/SDEV-220-UTTT/releases/download/game/U.TTT.zip))
 
 If you want to run the game from files
 
