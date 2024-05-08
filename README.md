@@ -6,8 +6,8 @@ If you want to run the game from files
 
 1. Make sure python is installed, you can download it [here](https://www.python.org/downloads/)
 2. in console, run these 2 commands (for Windows)
-   ###pip install pygame
-   ###pip install numpy
+   ### pip install pygame
+   ### pip install numpy
 3. Execute the code in main
 
 This program is set up to be converted to a WASP format to be used as a webapp. However, it contains mp3 files in its assets which are not usable in HTML, they must be converted to something like .ogg. If you wish to convert however, please use the following
