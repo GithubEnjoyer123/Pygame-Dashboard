@@ -10,7 +10,7 @@ If you want to run the game from files
    #### pip install numpy
 3. Execute the code in main
 
-This program is set up to be converted to a WASP format to be used as a webapp. However, it contains mp3 files in its assets which are not usable in HTML, they must be converted to something like .ogg. If you wish to convert however, please use the following
+This program is set up to be converted to a WASP format to be used as a webapp. However, it contains mp3 files in its assets which are not usable in HTML, they must be converted to something like .ogg. If you wish to convert after changing the sound files however (or want to run it as a test) then please do the following
 
 1. In console, run the following command
    #### pip install pygbag
