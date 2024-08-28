@@ -21,5 +21,4 @@ This program is set up to be converted to a WASP format to be used as a webapp. 
 If you wish to convert to a file format, run the following command 
   #### pygbag --archive --build folder
 
-should work on Windows 64 bit systems. If you download the exe, Chrome / Windows will say it's a virus because it's not signed in any way. It's not a virus though, ** Github themselves have checked the file to let me keep up this repository. It is safe!
-**
+should work on Windows 64 bit systems. If you download the exe, Chrome / Windows will say it's a virus because it's not signed in any way. It's not a virus though, **Github themselves have checked the file to let me keep up this repository. It is safe!**
